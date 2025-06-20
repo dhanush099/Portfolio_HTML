@@ -347,3 +347,175 @@
         .resumebtn .btn:hover i {
             transform: translateX(5px);
         }
+
+        /* ========== Responsive Design ========== */
+
+/* Mobile Devices (up to 768px) */
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .nav-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .about .row {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .about .row .image img {
+        width: 90%;
+    }
+
+    .about .row .content {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .ti {
+        text-align: center;
+        margin: 65px auto;
+        font-size: 1.2rem;
+    }
+
+    .footer .box-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer .box-container .box {
+        margin: 1rem 0;
+    }
+    body{
+        background-image: none;
+        background-color: black;
+    }
+}
+
+/* Tablets (769px - 1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .about .row {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .about .row .image img {
+        width: 80%;
+    }
+
+    .about .row .content {
+        padding: 20px;
+    }
+
+    .ti {
+        font-size: 1.5rem;
+    }
+}
+
+/* Desktop (above 1024px) */
+@media only screen and (min-width: 1025px) {
+    .about .row {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .about .row .image img {
+        max-width: 100%;
+    }
+
+    .ti {
+        font-size: 2rem;
+    }
+}
+
+/* Responsive Image Utility */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ========== Responsive Hamburger Menu ========== */
+
+/* Hide menu toggle by default (for desktop) */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+/* Mobile & Tablet View */
+@media only screen and (max-width: 1024px) {
+    /* Show the hamburger menu button */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 2px;
+        z-index: 1001;
+    }
+
+    /* Stack header contents */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        padding: 1rem 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        text-align: left;
+    }
+
+    /* Show nav when active class is toggled */
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        margin: 10px 20px;
+        font-size: 18px;
+    }
+
+    .nav-button {
+            border-radius: 12cm;
+            background: transparent;
+            transition: all 0.5s;
+            padding: 10px 20px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+    }
+
+    .nav-button:hover {
+        background-color: #333;
+    }
+
+    .nav-elements-active .nav-button {
+        background-color: #4cafad;
+    }
+}

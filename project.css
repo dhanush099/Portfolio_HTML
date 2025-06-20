@@ -381,3 +381,217 @@
         }
 
         /* work section ends */
+
+
+        /* ============ MOBILE (up to 768px) ============ */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-button {
+        margin: 5px 0;
+        width: 80%;
+    }
+
+    /* .t1 {
+        height: auto;
+    } */
+
+    .ti {
+        font-size: 1.5rem;
+        margin: 25px 0;
+        margin-left: 20px;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .work .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work .box-container .box {
+        width: 90%;
+        height: auto;
+        margin: 1rem 0;
+    }
+
+    .work .box-container .box .content {
+        position: static;
+    }
+
+    .work .box-container .box:hover .content {
+        top: auto;
+    }
+
+    .footer .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .box-container .box {
+        margin: 0.5rem 0;
+    }
+
+    .ti, .footer .credit {
+        font-size: 1rem;
+    }
+
+    .work .viewall .btn span {
+        font-size: 1rem;
+    }
+
+    .work .desc .btns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work .desc .btns .btn {
+        margin: 0.5rem 0;
+        width: 90%;
+        text-align: center;
+    }
+
+    .work .box-container .box .content .tag h3 {
+        font-size: 1.2rem;
+        padding: 0.3rem;
+        white-space: normal;
+        word-break: break-word;
+        text-align: center;
+    }
+
+    .work .box-container .box .content .tag {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem;
+        height: auto;
+    }
+}
+
+/* ============ TABLET (769px - 1024px) ============ */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .work .box-container {
+        justify-content: center;
+    }
+
+    .work .box-container .box {
+        width: 80%;
+        margin: 1rem;
+    }
+
+    .ti {
+        font-size: 1.5rem;
+    }
+
+    .footer .box-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+/* ============ DESKTOP (above 1024px) ============ */
+@media (min-width: 1025px) {
+    .ti {
+        font-size: 2rem;
+    }
+
+    .work .box-container .box {
+        width: 30%;
+        margin: 1rem;
+    }
+}
+
+/* Responsive Image Handling */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+/* ========== Responsive Hamburger Menu ========== */
+
+/* Hide menu toggle by default (for desktop) */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+/* Mobile & Tablet View */
+@media only screen and (max-width: 1024px) {
+    /* Show the hamburger menu button */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 2px;
+        z-index: 1001;
+    }
+
+    /* Stack header contents */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        padding: 1rem 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        text-align: left;
+    }
+
+    /* Show nav when active class is toggled */
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        margin: 10px 20px;
+        font-size: 18px;
+    }
+
+    .nav-button {
+            border-radius: 12cm;
+            background: transparent;
+            transition: all 0.5s;
+            padding: 10px 20px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+    }
+
+    .nav-button:hover {
+        background-color: #333;
+    }
+
+    .nav-elements-active .nav-button {
+        background-color: #4cafad;
+    }
+}

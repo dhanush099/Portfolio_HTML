@@ -305,29 +305,223 @@
             left: 8px;
         }
 
-        /* contact section media queries starts */
-        @media (max-width: 900px) {
-            .contact {
-                min-height: 70vh;
-            }
-
-            .contact .container {
-                margin: 3rem 0 2rem 0;
-            }
-
-            .contact .container .content {
-                padding: 18px 12px;
-            }
-
-            .contact .content .image-box {
-                display: none;
-            }
-
-            .contact .content form {
-                width: 100%;
-                margin-right: 2rem;
-            }
+        textarea {
+            max-width: 100%;
+            box-sizing: border-box;
+            resize: vertical;
         }
 
         /* contact section media queries ends */
         /* contact section ends */
+
+
+        /* Phone */
+    @media (max-width: 768px) {
+    .heading {
+        font-size: 1.2rem;
+    }
+
+    .ti {
+    font-size: 1.1rem;
+    margin-left: 5px;
+    text-align: center;
+}
+
+    .contact .container {
+        margin: 1rem;
+        width: auto;
+    }
+
+    .contact .container .content {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .contact .content form {
+        width: 100%;
+        margin: 0;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .form-group .field,
+    form .message {
+        margin: 0.7rem 0;
+    }
+
+    form .field input,
+    form .message textarea {
+        padding-left: 40px; 
+        font-size: 14px;
+    }
+
+    .button-area {
+        float: none;
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .button-area button {
+        margin-right: 0;
+        font-size: 1.2rem;
+        padding: 8px 14px;
+    }
+    form .message textarea {
+    min-height: 80px !important;
+    max-height: 120px !important;
+    padding: 10px 10px 10px 44px;
+    font-size: 14px;
+}
+}
+
+
+    /* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .t1 {
+        height: auto;
+        text-align: center;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contact .container {
+        margin: 0.2rem 0.2rem;
+    }
+
+    .contact .container .content {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    .contact .content .image-box {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+
+    .contact .content form {
+        width: 100%;
+        margin: 0;
+    }
+
+    .button-area {
+        justify-content: center;
+        float: none;
+        margin-top: 10px;
+    }
+
+    .button-area button {
+        margin-right: 0;
+    }
+}
+
+    /* Desktop */
+@media (min-width: 1025px) {
+    .contact .container {
+        margin: 2rem auto;
+    }
+
+    .contact .container .content {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 2.5rem 3rem;
+    }
+
+    .contact .content .image-box {
+        display: block;
+        max-width: 60%;
+    }
+
+    .contact .content form {
+        width: 45%;
+    }
+
+    .button-area {
+        float: right;
+        margin-right: 130px;
+    }
+}
+
+/* ========== Responsive Hamburger Menu ========== */
+
+/* Hide menu toggle by default (for desktop) */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+/* Mobile & Tablet View */
+@media only screen and (max-width: 1024px) {
+    /* Show the hamburger menu button */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 2px;
+        z-index: 1001;
+    }
+
+    /* Stack header contents */
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        padding: 1rem 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        text-align: left;
+    }
+
+    /* Show nav when active class is toggled */
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        margin: 10px 20px;
+        font-size: 18px;
+    }
+
+    .nav-button {
+            border-radius: 12cm;
+            background: transparent;
+            transition: all 0.5s;
+            padding: 10px 20px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+    }
+
+    .nav-button:hover {
+        background-color: #333;
+    }
+
+    .nav-elements-active .nav-button {
+        background-color: #4cafad;
+    }
+}

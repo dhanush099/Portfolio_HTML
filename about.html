@@ -11,6 +11,12 @@
     <!-- External Style Sheet  -->
     <link rel="stylesheet" href="about.css">
 
+    <script>
+        function toggleMenu() {
+            document.querySelector("nav").classList.toggle("active");
+        }
+    </script>
+
 
 </head>
 
@@ -35,6 +41,10 @@
             <a href="projects.html" class="nav-elements"><button class="nav-button">Projects</button></a>
             <a href="contact.html" class="nav-elements"><button class="nav-button">Contact</button></a>
         </nav>
+
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
 
     </header>
 

@@ -380,3 +380,206 @@
         }
 
         /* footer section ends */
+
+        /* Hide menu toggle button by default */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    margin-right: 20px;
+}
+
+/* ===========================
+   Responsive Design
+   =========================== */
+
+/* Mobile (up to 768px) */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .ti {
+        font-size: 1.2rem;
+        margin: 4;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-button {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .home {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .home .myphoto {
+        width: 250px;
+        height: 250px;
+        margin: 1rem 0;
+        float: none;
+    }
+
+    .content {
+        margin: 1rem;
+    }
+
+    .home .content h2,
+    .home .content h2 span {
+        font-size: 1.5rem;
+    }
+
+    .home .content p {
+        font-size: 1.2rem;
+    }
+
+    .socials {
+        margin-left: 0;
+        margin-top: 2rem;
+    }
+
+    .footer .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .box-container .box {
+        margin: 1rem;
+        text-align: center;
+    }
+
+        .home .btn {
+        position: static;
+        display: inline-block;
+        margin-top: 1.5rem;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .socials {
+        margin-top: 2rem;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .home .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Tablet (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .ti {
+        font-size: 1.6rem;
+    }
+
+    .nav-button {
+        font-size: 1.1rem;
+    }
+
+    .home .myphoto {
+        width: 350px;
+        height: 350px;
+        margin-right: 50px;
+    }
+
+    .home .content h2,
+    .home .content h2 span {
+        font-size: 2rem;
+    }
+
+    .home .content p {
+        font-size: 1.5rem;
+    }
+
+    .footer .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer .box-container .box {
+        margin: 1.5rem;
+        text-align: center;
+    }
+}
+
+/* Desktop (above 1024px) */
+@media screen and (min-width: 1025px) {
+    .home {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .home .content {
+        flex: 1;
+    }
+
+    .home .myphoto {
+        flex: 0.5;
+        margin-left: 50px;
+        margin-top: 25px;
+    }
+}
+
+/* Utility: Responsive Image */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mobile and Tablet view */
+@media screen and (max-width: 1024px) {
+    /* Show the menu toggle button */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide nav links initially */
+    nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background-color: #111;
+        position: absolute;
+        top: 130px; /* below header */
+        right: 0;
+        width: 100%;
+        z-index: 999;
+    }
+
+    /* Show nav when active class is toggled */
+    nav.active {
+        display: flex;
+    }
+
+    /* Style nav links for vertical menu */
+    nav a {
+        margin: 10px 0;
+    }
+}
