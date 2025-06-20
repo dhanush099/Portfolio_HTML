@@ -576,22 +576,27 @@ img {
         font-size: 18px;
     }
 
-    .nav-button {
-            border-radius: 12cm;
-            background: transparent;
-            transition: all 0.5s;
-            padding: 10px 20px;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-    }
+.nav-button {
+    display: block; /* Ensures it takes up full width */
+    width: 100%; /* Make button take full width of parent */
+    border-radius: 0; /* Optional: remove circular radius for full coverage */
+    background: transparent;
+    transition: all 0.5s;
+    padding: 10px 20px; /* More padding for better touch area */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left; /* Align text nicely */
+}
 
-    .nav-button:hover {
-        background-color: #333;
-    }
+.nav-button:hover {
+    background-color: #333;
+}
 
-    .nav-elements-active .nav-button {
-        background-color: #4cafad;
-    }
+.nav-elements-active .nav-button {
+    background-color: #4cafad;
+    color: white;
+}
+
 }
