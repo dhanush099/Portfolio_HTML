@@ -401,6 +401,9 @@
         background-image: none;
         background-color: black;
     }
+        .share{
+        margin-left: 115px;
+    }
 }
 
 /* Tablets (769px - 1024px) */
